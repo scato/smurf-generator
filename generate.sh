@@ -10,7 +10,7 @@ templates=$(cd templates; find * -type f)
 
 for template in $templates
 do
-    input="examples/$template"
+    input=".smurf/$template"
     regexp=$(echo $template | sed -e 's/\./\\./g' -e 's/Smurf/\\(.*\\)/g')
     match=$(echo $artifact | grep "$regexp" | sed "s/$regexp/\\1/")
 

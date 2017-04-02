@@ -8,7 +8,7 @@ template=$1
 input=$2
 artifact=$(echo $input | sed -e 's/^.*\/\(.*\)$/\1/')
 
-output="examples/$template"
+output=".smurf/$template"
 regexp=$(echo $template | sed -e 's/\./\\./g' -e 's/Smurf/\\(.*\\)/g')
 match=$(echo $artifact | grep "$regexp" | sed "s/$regexp/\\1/")
 
