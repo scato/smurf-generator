@@ -6,7 +6,7 @@ toUpperCase='{ rest = substr($0, 2); gsub(/[A-Z]/, "_&", rest); print substr($0,
 
 output=$1
 artifact=$(echo $output | sed -e 's/^.*\/\(.*\)$/\1/')
-templates=$(cd templates; find * -type f)
+templates=$(cd .smurf; find * -type f)
 
 for template in $templates
 do
